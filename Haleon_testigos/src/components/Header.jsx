@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import "../styles/Header.css";
-import logo from "../assets/haleon.png";
 
 export default function Header() {
     const [darkMode, setDarkMode] = useState(false);
@@ -35,7 +34,7 @@ export default function Header() {
                 </div>
 
                 <div className="header-right">
-                    <img src={logo} alt="Logo" style={{ width: '25%', height: 'auto' }} />
+                    <img src="https://i.postimg.cc/7Zgyxv8b/haleon.png" alt="Logo" style={{ width: '25%', height: 'auto' }} />
                     <button
                         onClick={() => setDarkMode(!darkMode)}
                         className="theme-toggle"

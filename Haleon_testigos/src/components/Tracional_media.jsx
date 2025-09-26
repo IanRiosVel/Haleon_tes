@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Tracional_media.css";
 export default function Multivitaminicos({titulo, tradicional, digital}) {
 
     const [selectMedios, setSelectedButton] = useState(null);
@@ -11,14 +12,14 @@ export default function Multivitaminicos({titulo, tradicional, digital}) {
     <title>{titulo}</title>
     <div>
         <section style={{textAlign: 'center', margin: '20px', alignContent: 'center',alignItems: 'center'}}>
-            <h1 style={{borderRadius:'10px',backgroundColor:'#6a4a6f',color:'white', padding:'10px'}}>{titulo}</h1>
+            <h1 style={{borderRadius:'10px',backgroundColor:'#186cee',color:'white', padding:'10px'}}>{titulo}</h1>
             <h3>Selecciona el tipo de medio para mostrar sus testigos</h3>
         </section>
         
         <div className="bottons">
             <ul>
-                <li><button onClick={()=> handleSelect("Medios Tradicionales")}>Medios Tradicionales</button></li>
-                <li><button onClick={()=> handleSelect("Medio Digital")}>Medio Digital </button></li>
+                <li><button className="bottons_trad" onClick={()=> handleSelect("Medios Tradicionales")}>Medios Tradicionales</button></li>
+                <li><button className="bottons_dig" onClick={()=> handleSelect("Medio Digital")}>Medio Digital </button></li>
             </ul>
         </div>
         
@@ -27,7 +28,7 @@ export default function Multivitaminicos({titulo, tradicional, digital}) {
         {
             mostrarMarcas.map((marca, index) => (
                 <div key={index} className="marca" style={{ textAlign: 'center', margin: '20px' }}>
-                <h2 style={{alignItems:"center",backgroundColor:'#937097',borderRadius:"15px"}}>{marca.nombre}</h2>
+                <h2 style={{alignItems:"center",backgroundColor:'#186cee',borderRadius:"15px", color:'white'}}>{marca.nombre}</h2>
                 <video width="320" height="240" controls style={{borderRadius: '15px'}}>
                     <source src={marca.video} type="video/mp4" />
                 </video>
@@ -36,7 +37,7 @@ export default function Multivitaminicos({titulo, tradicional, digital}) {
                     marginBottom: '10px',
                     margin:'10px',
                     maxWidth: '320px',
-                    backgroundColor: '#bb97bf',
+                    backgroundColor: '#4fe0ed',
                     padding: '10px',
                     borderRadius: '15px',
                     fontFamily: 'Arial, sans-serif'
